@@ -1,0 +1,25 @@
+@import "nullstyle.scss";
+@media (min-width: 500px) {
+    ::-webkit-scrollbar{
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track{
+        border-radius: 100px;
+    }
+    ::-webkit-scrollbar-thumb{
+        background: #8a8a8a;
+        background-clip: content-box;
+        border: 3px solid rgba(0, 0, 0, 0.0);
+        border-radius: 100px;
+    }
+    ::-webkit-scrollbar-track-piece{
+        background: rgba(0, 0, 0, 0.0);
+    }
+    ::-webkit-scrollbar-button{
+        background: rgba(0, 0, 0, 0.0);
+    }
+    ::-webkit-scrollbar-corner {
+        background: rgba(0, 0, 0, 0.0);
+    }
+}
+
