@@ -69,6 +69,15 @@ body{
             background: rgba(251, 214, 11, 1);
         }
     }
+    @media screen and (max-width: 1000px){
+        >h1{
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            width: 100%;
+        }
+    }
 }
 .main{
     section{
@@ -92,13 +101,37 @@ body{
             line-height: 29px;
             color: #FFFFFF;
             margin-bottom: 35px;
+            @media screen and (max-width: 1200px){
+                text-align: center;
+                width: 100%;
+                font-size: 18px;
+                line-height: 22px;
+                text-align: center;
+            }
         }
     }
     .list{
         display: flex;
         justify-content: stretch;
         gap: 39px;
-        //flex-wrap: wrap;
+        @media screen and (max-width: 1240px){
+            flex-wrap: wrap;
+            .item{
+                min-width: 272px;
+                h2{
+                    font-size: 15px;
+                    line-height: 17px;
+                }
+                p{
+                    font-size: 15px;
+                    line-height: 18px;
+                }
+                img{
+                    height: 72px;
+                    margin-bottom: 24px;
+                }
+            }
+        }
         .item{
             min-width: 350px;
             width: 100%;
@@ -134,11 +167,18 @@ body{
         grid-template-columns: 1fr 1fr;
         column-gap: 104px;
         row-gap: 28px;
+        @media screen and (max-width: 1200px){
+            grid-template-columns: 1fr;
+        }
         .item{
             img{
                 height: 313px;
                 width: 100%;
                 object-fit: cover;
+                @media screen and (max-width: 582px) {
+                    object-fit: contain;
+                    height: auto;
+                }
             }
             h2{
                 font-weight: 600;
@@ -147,10 +187,15 @@ body{
                 text-transform: uppercase;
                 color: #1F3B4C;
                 margin-top: 32px;
+                @media screen and (max-width: 800px){
+                    font-size: 18px;
+                    line-height: 21px;
+                }
             }
             span{
                 display: block;
-                width: 316px;
+                max-width: 316px;
+                width: 70%;
                 height: 6px;
                 background: rgba(251, 214, 11, 1);
                 margin-top: 5px;
@@ -185,6 +230,13 @@ body{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 32px;
+        width: 100%;
+        @media screen and (max-width: 1000px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (max-width: 650px) {
+            grid-template-columns: 1fr;
+        }
         .item{
             display: flex;
             flex-direction: column;
@@ -245,6 +297,48 @@ body{
         }
     }
 }
+.section-product{
+    margin-top: 72px;
+}
+.section-about{
+    background: #FFFFFF;
+    width: 100%;
+    .list{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 18px 0;
+        gap: 32px;
+        @media screen and (max-width: 800px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .item{
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            @media screen and (max-width: 800px) {
+                width: 100%;
+            }
+            p{
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 25px;
+                text-align: center;
+                text-transform: uppercase;
+                margin-top: 9px;
+                @media screen and (max-width: 800px) {
+                    font-size: 15px;
+                    line-height: 17px;
+                }
+            }
+        }
+    }
+}
 a.button{
     font-weight: 500;
     font-size: 24px;
@@ -263,6 +357,16 @@ a.button{
         transition: 0.3s;
         background: #2A5168;
         color: #FFFFFF
+    }
+    @media screen and (max-width: 700px) {
+        width: 272px;
+        height: 59px;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 23px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #000000;
     }
 }
 
