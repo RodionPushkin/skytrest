@@ -36,6 +36,10 @@ body{
 .header{
     width: 100vw;
     padding-top: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
     input{
         display: none;
     }
@@ -191,7 +195,9 @@ body{
             line-height: 22px;
             text-transform: uppercase;
             color: #067C94;
-
+            &-active{
+                border-bottom: 6px solid #FBD60B;
+            }
         }
         @media screen and (max-width: 1030px){
             position: absolute;
@@ -258,13 +264,11 @@ body{
         }
     }
 }
-.main{
-    section{
-        .container{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
+section{
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 .section-why{
@@ -582,12 +586,35 @@ body{
 }
 .section-main{
     width: 100vw;
-    height: calc(100vh - (24px + 72px + 56px + 22px));
+    height: 100vh;
+    background: url("../img/Group 19.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    @media screen and (max-width: 1270px) {
+        min-height: 100vh;
+        height: auto;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        height: 100%;
+        @media screen and (max-width: 1270px) {
+            padding-top: 100px;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
     h1{
         font-weight: 600;
         font-size: 52px;
         line-height: 63px;
         color: #1F3B4C;
+        z-index: 5;
+        position: relative;
         span{
             background: none;
             display: block;
@@ -597,8 +624,43 @@ body{
             font-weight: 800;
         }
     }
+    .list{
+        //margin-top: 32px;
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .item{
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            p{
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 29px;
+                color: #1F3B4C;
+            }
+        }
+    }
     img{
-
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        right: -35%;
+        transform: translateY(-50%);
+        z-index: 1;
+        @media screen and (max-width: 1270px) {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: none;
+            order: 2;
+        }
+    }
+    .button{
+        @media screen and (max-width: 1270px) {
+            order: 3;
+        }
     }
 }
 .section-delivery{
@@ -655,6 +717,81 @@ body{
 }
 .section-partners{
     margin-top: 72px;
+    .slider{
+        width: 100%;
+        margin-bottom: 56px;
+        overflow: hidden;
+        position: relative;
+
+        @media screen and (max-width: 1050px) {
+            display: flex;
+            flex-direction: column;
+            .slick-list{
+                order: -1;
+            }
+        }
+        .slick-prev{
+            height: 72px;
+            width: 72px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            z-index: 100;
+            font-size: 0;
+            background: #067C94;
+            background-image: url('../img/arrowleft.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+            @media screen and (max-width: 1050px) {
+                position: relative;
+                order: 3;
+                transform: none;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                margin-top: 24px;
+            }
+        }
+        .slick-next{
+            height: 72px;
+            width: 72px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            z-index: 100;
+            font-size: 0;
+            background: #067C94;
+            background-image: url('../img/arrowright.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+            @media screen and (max-width: 1050px) {
+                position: absolute;
+                order: 3;
+                transform: none;
+                right: 0;
+                display: inline-block;
+                top: auto;
+                bottom: 0;
+            }
+        }
+        .slider__item{
+            img{
+                width: 80%;
+                height: 200px;
+                object-fit: contain;
+                margin: 0 auto;
+            }
+        }
+    }
+    .button{
+        margin: 0 auto;
+    }
 }
 .section-contact{
     padding: 72px 0;
