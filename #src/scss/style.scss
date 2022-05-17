@@ -189,6 +189,7 @@ body{
         gap: 36px;
         justify-content: center;
         align-items: center;
+        z-index: 10;
         .link{
             font-weight: 500;
             font-size: 18px;
@@ -511,7 +512,7 @@ section{
                 margin-top: 16px;
                 h2{
                     font-weight: 600;
-                    font-size: 22px;
+                    font-size: 20px;
                     line-height: 25px;
                     text-transform: uppercase;
                     color: #1F3B4C;
@@ -529,7 +530,7 @@ section{
                 }
                 p{
                     font-weight: 400;
-                    font-size: 22px;
+                    font-size: 18px;
                     line-height: 25px;
                     color: #1F3B4C;
                     @media screen and (max-width: 960px) {
@@ -561,7 +562,7 @@ section{
             gap: 20px;
         }
         .item{
-            width: 250px;
+            width: 201px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -601,7 +602,10 @@ section{
         justify-content: center;
         align-items: flex-start;
         position: relative;
-        height: 100%;
+        height: 120%;
+        h1{
+            padding-bottom: 0;
+        }
         @media screen and (max-width: 1270px) {
             padding-top: 100px;
             flex-direction: column;
@@ -648,7 +652,7 @@ section{
         top: 50%;
         right: -35%;
         transform: translateY(-50%);
-        z-index: 1;
+        z-index: -1;
         @media screen and (max-width: 1270px) {
             position: relative;
             top: 0;
