@@ -1054,4 +1054,18 @@ a.button{
         color: #000000;
     }
 }
+.up{
+    position: fixed;
+    bottom: 48px;
+    right: 48px;
+    height: 48px;
+    width: 48px;
+    border-radius: 24px;
+    background: #fbd60b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #525151;
+}
 
